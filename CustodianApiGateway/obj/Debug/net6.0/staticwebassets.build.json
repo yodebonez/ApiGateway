@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "C6gVuB7V/sS1bvg2rFV51QYSy9Ty4c3Z2Ci55o+uzNY=",
+  "Source": "CustodianApiGateway",
+  "BasePath": "_content/CustodianApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

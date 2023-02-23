@@ -1,0 +1,68 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7283"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "DownstreamPathTemplate": "",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7285
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7285
+        }
+      ]
+    }
+
+  ]
+}
