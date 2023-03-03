@@ -8,7 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // cors
 builder.Services.AddCors(options => {
-    options.AddPolicy("CORSPolicy", builder => builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((hosts) => true));
+    options.AddPolicy("CORSPolicy", builder => 
+        builder.AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials()
+            .SetIsOriginAllowed((hosts) => true)
+    );
 });
 
 //ocelot configuration
@@ -31,12 +36,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-await app.UseOcelot();
+app.UseCors("CORSPolicy");
+
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+await app.UseOcelot();
 
 app.Run();
